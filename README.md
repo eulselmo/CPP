@@ -1,7 +1,8 @@
 # Concurrent Programing
 
-[Linq](/Linq)
-* exampleLinq.cs - Example to calculate the average marks of diferents students in 
+[## LINQ](/Linq)
+* **exampleLinq.cs** - Example to calculate the average marks of diferents students 
+in 
 differents countries 
 
   ![example linq](Linq/exampleLinq.jpg)
