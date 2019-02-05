@@ -3,7 +3,10 @@
 
   ![example linq](Linq/exampleLinq.jpg)
 
-* normalVSparallelloop.jpg
+* normalVSparallelloop.cs - Example to
+
+  ![example linq](normalVSparallelLoop/normalVSparallelloop.jpg)
+
 * perfectNumberThreads.cs - Perfect Numbers using parallel for
 * perfectNumberThreads2.cs - Perfect Numbers using threads
 * createThreads.cs - Create threads differents
