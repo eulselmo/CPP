@@ -12,10 +12,10 @@ differents countries
 
   ![example normal vs parallel loop](NormalVSParallelLoop/normalVSparallelloop.jpg)
 
-[PERFECT NUMBERS](Perfect\ Numbers/)
+[PERFECT NUMBERS](/Perfect\ Numbers/)
 * **perfectNumberThreads.cs** - Perfect Numbers using parallel for
 * **perfectNumberThreads2.cs** - Perfect Numbers using threads
 
-[USES WITH THREADS](Uses\ with\ Threads/)
+[USES WITH THREADS](/Uses\ with\ Threads/)
 * **createThreads.cs** - Create threads differents
 * **threadsJoin.cs** - Create threads using join
