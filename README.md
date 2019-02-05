@@ -5,7 +5,7 @@
 
 * normalVSparallelloop.cs - Example to
 
-  ![example linq](normalVSparallelLoop/normalVSparallelloop.jpg)
+  ![example normal vs parallel loop](NormalVSparallelLoop/normalVSparallelloop.jpg)
 
 * perfectNumberThreads.cs - Perfect Numbers using parallel for
 * perfectNumberThreads2.cs - Perfect Numbers using threads
