@@ -6,6 +6,7 @@ class ThreadTest
 {
     static void Main()
     {
+	//Creation of differents threads and initialize
         Thread t = new Thread(new ThreadStart(Go));
         t.Start();   // Run Go() on the new thread.
         Go();        // Simultaneously run Go() in the main thread.
@@ -20,7 +21,7 @@ class ThreadTest
         t4.Start();
 
         //---------------------------------
-
+	//Use of lambda to write in the differents threads
         for (int i = 0; i < 10; i++)
             new Thread(() => Console.Write(i)).Start();
 
