@@ -8,7 +8,7 @@ public class Program
 {
     public static void Main()
     {
-        // Student collection
+        // Creation of Student collection with different dates
         List<Student> students = new List<Student>() {
                 new Student() { Country = "Spain", Name = "Zbych", Marks = 13, Faculty = "Informatics"} ,
                 new Student() { Country = "Spain", Name = "John", Marks = 11, Faculty = "Informatics"} ,
@@ -28,18 +28,21 @@ public class Program
 
         Console.WriteLine("----------------------------------------");
         Console.WriteLine("(Ex 4.) Candidates by faculties:");
-        //-----------------------------------
+        
+	//-----------------------------------
+	//Query SQL with the way it's going to be displayed the information
 
         var result2 = from s in students
                           //where s.Marks > 11
                       orderby s.Country, s.Marks descending
                       group s by s.Country;
 
-        //iterate each group        
+        //iterate each group within the query       
         foreach (var country in result2)
         {
             Console.WriteLine("");
-            Console.WriteLine("{0}:", country.Key); //Each group has a key 
+            Console.WriteLine("{0}:", country.Key); //the country is printed followed by the 
+result sorted by name, faculty and marks 
 
 
             foreach (Student s in country) // Each group has inner collection
@@ -49,6 +52,7 @@ public class Program
 
         Console.WriteLine("----------------------------------------");
         Console.WriteLine("(Ex 5.) Average for all faculties:");
+	//find the maximum average mark
 
         var result3 =
             from s in students
@@ -60,7 +64,7 @@ public class Program
                 AverageMarks = groups.Max(s => s.Marks),
             };
 
-
+	//printed by the country and average mark
         foreach (var f in result3)
         {
             Console.WriteLine("{0} \t  {1}", f.Country, f.AverageMarks);
