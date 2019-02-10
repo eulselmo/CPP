@@ -6,6 +6,7 @@ class ThreadTest
 {
     static void Main()
     {
+	//show the time to know when finish
         string start = DateTime.Now.ToString("HH:mm:ss tt");
         string stop;
         Console.WriteLine(start);
@@ -23,6 +24,7 @@ class ThreadTest
 
         Thread t3 = new Thread(() => Go(40, "3--> "));
         t3.Start();
+	//to ensute that a thread has been terminated, if the thread has already termined the returns immediately
         t3.Join();
 
         Thread t4 = new Thread(() => Print(DateTime.Now.ToString("HH:mm:ss tt")));
