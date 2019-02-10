@@ -7,14 +7,14 @@ class ThreadNaming
 {
     static void Main()
     {
-
-        //main threads
+	//two int, the first define the init and the second define the limit
+        //Use of the main threads
         GoPerfect(2, 35000, "main thread (1) --> ");
         GoPerfect(35001, 70000, "main thread (2) --> ");
 
         Console.WriteLine("---------------------");
-
-
+	
+	//Creation of the threads with call to the method GoPerfect
         Task task2 = new Task(() => GoPerfect(2, 35000, "2nd thread ------>"));
         task2.Start();
 
@@ -34,7 +34,7 @@ class ThreadNaming
 
     }
 
-
+    //method to calculate the perfect numbers	
     static bool PerfectNumbers(long n)
     {
         long s = 0;
@@ -53,6 +53,7 @@ class ThreadNaming
 
     static void GoPerfect(int a, int b, string m)
     {
+	//watch to compare main thread with the other threads
         Stopwatch sw = Stopwatch.StartNew();
         //string start = DateTime.Now.ToString("HH:mm:ss tt");
 
