@@ -7,6 +7,7 @@ class ThreadNaming
 {
     static void Main()
     {
+	//initialize the normal loop versus the parallel loop where the first int is the start and the second int is the limit
 
         GoPerfect(1, 50000, "Normal Loop");
 
@@ -32,7 +33,8 @@ class ThreadNaming
         if (n == s) return true;
         else return false;
     }
-
+    //the difference between both methods is the use of two longs in parallel and other kind of loop where the first two parameters specify the initial and final iteration values. 
+    //The third parameter is where the local state is initialized
     static bool PerfectNumbersParallel(long n)
     {
         long s = 0;
