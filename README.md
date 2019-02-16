@@ -185,3 +185,23 @@ static long Fibo(int n)
 
     }
 ```
+[Differences Between Multitasking and 
+Multithreading](https://techdifferences.com/difference-between-multitasking-and-multithreading-in-os.html)
+ * The basic difference between multitasking and 
+multithreading is that in multitasking, the system allows 
+executing multiple programs and tasks at the same time, 
+whereas, in multithreading, the system executes multiple 
+threads of the same or different processes at the same 
+time.
+
+ * In multitasking CPU has to switch between multiple 
+programs so that it appears that multiple programs are 
+running simultaneously. On other hands, in multithreading 
+CPU has to switch between multiple threads to make it 
+appear that all threads are running simultaneously.
+
+ * Multitasking allocates separate memory and resources for 
+each process/program whereas, in multithreading threads 
+belonging to the same process shares the same memory and 
+resources as that of the process.
+
