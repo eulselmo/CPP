@@ -6,7 +6,7 @@ in differents countries
 
  The syntax is similar to the one in SQL, but with the advantage that we have the power of .net and visual studio when coding. With lambda, we can directly call functions where, join, select, directly from the object.
 
-  ```
+  ```csharp
   var result3 =
             from s in students
             group s by s.Country into groups
@@ -25,7 +25,7 @@ version
 
  Parallel.For and normal For loop both share the similar syntax, but the parallel loop runs faster on a computer that has available cores. Another difference is that, unlike a sequential loop, the order of execution isn't defined for a parallel loop. Steps often take place at the same time, in parallel.
 
-```
+```csharp
 for (int i = 0; i < 5; i++)
             {
 		//initialize watch and process in serial
@@ -60,7 +60,7 @@ static void Serial(double[] array, double factor)
 [PERFECT NUMBERS](PerfectNumbers/)
 * **perfectNumberwithParallel.cs** - Perfect Numbers using parallel for
   Can improve performance a lot by parallelizing your code, but it also has overhead (synchronization between threads, invoking the delegate on each iteration).
-```
+```csharp
 GoPerfect(1, 50000, "Normal Loop");
 
         Console.WriteLine(" --------------------------- ");
@@ -86,7 +86,7 @@ GoPerfect(1, 50000, "Normal Loop");
 
 * **perfectNumberwithThreads.cs** - Perfect Numbers using differents threads
  The task is more abstract than the threads. It is created in the subprocess group that already has threads created by the system to improve performance.Tasks are usually created in the subprocess group and they are treated as background subprocesses.
-```
+```csharp
 GoPerfect(2, 35000, "main thread (1) --> ");
         GoPerfect(35001, 70000, "main thread (2) --> ");
 
@@ -120,7 +120,7 @@ static bool PerfectNumbers(long n)
 [USES WITH THREADS](UseswithThreads/)
 * **createThreads.cs** - Creation of differents threads
  Thread is a light weight process which helps in running the tasks in parallel. The threads works independently and provides the maximum utilization of the CPU, thus enhancing the CPU performance.
-```
+```csharp
 //Creation of differents threads and initialize
         Thread t = new Thread(new ThreadStart(Go));
         t.Start();   // Run Go() on the new thread.
@@ -149,7 +149,7 @@ static bool PerfectNumbers(long n)
 ```
 * **threadsJoin.cs** - Creation of threads using join
  The join method causes the Thread from where that method is invoked, to be blocked until the thread invoked ends.
-```
+```csharp
 Go(50, "0--> ");
 
         Thread t = new Thread(() => Go(40, "1--> "));
